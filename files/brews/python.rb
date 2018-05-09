@@ -291,7 +291,7 @@ class Python < Formula
   end
 
   def sitecustomize
-    <<!EOF
+    <<~EOF
       # This file is created by Homebrew and is executed on each python startup.
       # Don't print from here, or else python command line scripts may fail!
       # <https://github.com/Homebrew/brew/blob/master/docs/Homebrew-and-Python.md>
