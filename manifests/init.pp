@@ -10,18 +10,13 @@ class python {
   include xquartz
   include python::config
 
-  $version = '2.7.15'
-
-  homebrew::formula { 'python':
-  }
-
-  homebrew::formula { 'python@2':
-  }
   package { 'boxen/brews/python':
-    ensure  => $version,
     require => Class['xquartz']
   }
 
+  package { 'boxen/brews/python@2':
+    require => Class['xquartz']
+  }
   boxen::env_script { 'python':
     ensure   => 'absent',
     content  => '# noop',
