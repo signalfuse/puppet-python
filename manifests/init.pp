@@ -13,9 +13,10 @@ class python {
   $version = '2.7.15'
 
   homebrew::formula { 'python':
-    before => Package['boxen/brews/python']
   }
 
+  homebrew::formula { 'python@2':
+  }
   package { 'boxen/brews/python':
     ensure  => $version,
     require => Class['xquartz']
