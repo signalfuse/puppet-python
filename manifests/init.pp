@@ -10,11 +10,11 @@ class python {
   include xquartz
   include python::config
 
-  package { 'boxen/brews/python':
+  package { 'python':
     require => Class['xquartz']
   }
 
-  package { 'boxen/brews/python@2':
+  package { 'python@2':
     require => Class['xquartz']
   }
   boxen::env_script { 'python':
